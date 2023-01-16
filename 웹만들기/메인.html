@@ -15,10 +15,9 @@
     
     <!-- 부트스트랩 적용 후 스타일 적용시켜야되기 때문에 부트스트랩 소스 밑에 style 태그 써주기!!-->
     <style>
-        .navbar-default{background-color: lemonchiffon;}
-        .navbar-default .navbar-nav>.active>a { background-color:orange; }
+        .navbar-default{background-color: white;}
+        .navbar-default .navbar-nav>.active>a { background-color:aliceblue; }
         p{
-            
             background-color: cornsilk;
         }
 
@@ -62,10 +61,20 @@
             border:none;
         }
 
-        p{
+        .introduce{
+            text-align: center;
+            background-color: white;
+        }
+
+        .about{
             text-align: center;
         }
 
+        footer{
+            background-color:rgb(29, 27, 27);
+            text-align: center;
+            color: white
+        }
     </style>
 
 </head>
@@ -249,16 +258,20 @@
 			</ul>
 		</div>
 	</div>
- 
-    <pre>
-        <b>
-            사진만 첨부하면 알아서 뚝딱
-            그저 업로드만 하세요, 추천은 우리가 해 드릴게요.
-            똑똑하게 원하는 아이템을 찾아드리는 HAPPYVIRUS,
-            지금바로 이용해 보세요!
-        </b>
-       <button type="button" class="btn btn-primary">서비스 이용해보기</button>
-    </pre>
+    <div class="introduce">
+        <ul>
+            <li>
+                <p>
+                    <h3><b>사진만 첨부하면 알아서 뚝딱</b></h3>
+                    <h3><b>그저 업로드만 하세요, 추천은 우리가 해 드릴게요.</b></h3>
+                    <h3><b>똑똑하게 원하는 아이템을 찾아드리는 HAPPYVIRUS,</b></h3>
+                    <h3><b>지금바로 이용해 보세요!</b></h3><br>
+                    
+                    <button type="button" class="btn btn-primary">서비스 이용해보기</button>
+                </p>
+            </li>
+        </ul>
+    </div>
 
     <div class="img_rotator">
         이미지들이 여러개 로테이션되면서 돌아감
@@ -282,5 +295,11 @@
             </li>
         </ul>
     </div>
+    <footer>
+        <b>이용약관</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>개인정보처리방침</b><br>
+        <b>고객상담 1588-0000</b>&nbsp;&nbsp;(평일 오전 9시 ~ 오후 6시) <br>
+        <b>대표&nbsp;&nbsp;김윤호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;스마트인재개발원&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;대표전화 1588 - 0000</b><br>
+        <b>mojimoji@mojimoji.com</b>
+    </footer>
 </body>
 </html>
