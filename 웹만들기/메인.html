@@ -34,7 +34,7 @@
         .section input[id*="slide"] {display:none;}
 
         /* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
-        .section .slidewrap {max-width:1200px;margin:0 auto;overflow:hidden;}
+        .section .slidewrap {max-width:1200px; margin:0 auto;overflow:hidden;}
         .section .slidelist {white-space:nowrap;font-size:0;}
         .section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
         .section .slidelist > li > a {display:block;position:relative;}
@@ -54,15 +54,23 @@
         
         /*가운데 정렬*/
         pre{
+            font-family: 맑은 고딕; 
+            font-size: 20pt; 
+            text-decoration: none;
             text-align: center;
             background-color: white;
             border:none;
+        }
+
+        p{
+            text-align: center;
         }
 
     </style>
 
 </head>
 <body>
+
     <!-- nav 태그로 전체를 감싸준다-->
     <nav class="navbar navbar-default"> <!-- inverse / default -->
         <div class="container-fluid">
@@ -80,7 +88,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">회사소개<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">인사말</a></li>
                             <li><a href="#">회사연혁</a></li>
@@ -93,7 +101,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">ContactUs<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown">Contact us<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">자연어 처리 시스템</a></li>
                             <li><a href="#">RPA(로봇 프로세스 자동화)</a></li>
@@ -111,13 +119,15 @@
                         </ul>
                     </li>
                 </ul>
+ 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a><span class="glyphicon glyphicon-log-in">로그인</span></a></li>
-                    <li><a><span class="glyphicon glyphicon-user">회원가입</span></a></li>
+                    <li><a><span class="glyphicon glyphicon-user">회원가입</span></a></li> 
                 </ul>
             </div>
         </div>
     </nav>
+
 
     <!-- 이미지 슬라이드 -->
     <div class="section">
@@ -148,7 +158,7 @@
 					<a>
 						<label for="slide05" class="left"></label>
  
-						<img src="img/블랙핑크.jpg" style="width: 800; height: 500;">
+						<img src="img/블랙핑크.jpg">
 						<label for="slide02" class="right"></label>
 					</a>
 				</li>
@@ -169,7 +179,7 @@
                     </p>
 					<a>
 						<label for="slide01" class="left"></label>
-						<img src="img/방탄소년단.png" style="width: 800; height: 500;">
+						<img src="img/bts.jpg">
 						<label for="slide03" class="right"></label>
 					</a>
 				</li>
@@ -249,7 +259,28 @@
         </b>
        <button type="button" class="btn btn-primary">서비스 이용해보기</button>
     </pre>
-    
 
+    <div class="img_rotator">
+        이미지들이 여러개 로테이션되면서 돌아감
+    </div>
+
+    <div class="about">
+        <ul class="about_ul">
+            <li>
+                <p>
+                    <h3><b>여러분이 원하는 스타일,</b></h3>
+                    <h3><b>사진으로 쉽고 간편하게</b></h3>
+                    <h3><b>찾아 드려요</b></h3>
+
+                    <br>
+            
+                    <h4>모지모지는 패션과 K-POP산업에 숙련된 인재들과 함께하며,</h4>
+                    <h4>언제든지 저희 고객들에게 최상의 서비스를 제공합니다.</h4>
+                    <h4>저희의 패션 매칭 서비스를 이용해보시고,</h4>
+                    <h4>사랑받는 셀럽들과 자신만의 스타일을 찾아보세요!</h4>
+                </p>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
