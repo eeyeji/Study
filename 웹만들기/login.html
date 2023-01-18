@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>로그인 페이지</title>
+
+    <!-- 부트스트랩 소스 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    
+   
+        <table align="center" height="25" width="250" border="0">
+            <tr>
+                <td>
+                    <div id="main-title"><h3><b>mojimoji</b></h3></div>
+                    <div id="sub-title">
+                        <h4>
+                            나만의 스타일을 찾을 땐,<br>
+                            역시 모지모지에서.<br>
+                        </h4>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <table align="center" style="margin-top: 1%;">
+            <tr>
+                <td><input type="text" placeholder="아이디" name="id" value="" style="height:40px; width:250px;"></td>
+        </tr>  
+        </table>
+
+
+        <table align="center" style="margin-top: 1%;">
+            <tr>
+                <td>
+                    <input type="password" placeholder="비밀번호" name="pw" value="" style="height:40px; width:250px"><br>
+                    <input type="checkbox" name="auto_login"/>자동 로그인
+                    <a style="text-decoration: none; text-align: right;" href="#">비밀번호 찾기</a>                   
+                </td>
+            </tr>  
+        </table>
+
+        <table align="center" height="40" style="margin-top:1%">
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-primary" style="width: 250px">로그인</button> <br>
+                    <button type="button" class="btn btn-bagic" style="width: 250px; margin-top:3%">회원가입</button>
+                </td>
+            </tr>
+        </table> 
+        <table align="center" width="250" border="0" style="margin-top:1%">
+            <tr>
+                <td>
+                    <a style="text-decoration: none; text-align: left;" href="#">메인으로 돌아가기</a>
+                </td>
+            </tr>
+        </table>
+      
 </body>
 </html>
