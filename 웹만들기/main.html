@@ -98,7 +98,6 @@
 
 </head>
 <body>
-
     <!-- nav 태그로 전체를 감싸준다-->
     <nav class="navbar navbar-default"> <!-- inverse / default -->
         <div class="container-fluid">
@@ -114,7 +113,7 @@
             <!-- data-target 값과 id 값을 일치시켜 div1과 div2를 연결시켜줌-->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="main.html">Home</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -138,19 +137,17 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">개인정보취급방침<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown">Community<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">개인정보의 수집 목적 및 이용 목적</a></li>
-                            <li><a href="#">개인정보 보유 및 이용기간</a></li>
-                            <li><a href="#">개인정보의 파기 절차 및 방법</a></li>
-                            <li><a href="#">개인정보의 공유와 제공</a></li>
+                            <li><a href="board.html">자유 게시판</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
  
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a><span class="glyphicon glyphicon-log-in">로그인</span></a></li>
-                    <li><a><span class="glyphicon glyphicon-user">회원가입</span></a></li> 
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in">로그인</span></a></li>
+                    <li><a href="sign_up.html"><span class="glyphicon glyphicon-user">회원가입</span></a></li> 
                 </ul>
             </div>
         </div>
@@ -286,7 +283,7 @@
                     <h3><b>똑똑하게 원하는 아이템을 찾아드리는 HAPPYVIRUS,</b></h3>
                     <h3><b>지금바로 이용해 보세요!</b></h3><br>
                     
-                    <button type="button" class="btn btn-primary">서비스 이용해보기</button>
+                    <button type="button" class="btn btn-primary" onClick="location.href='upload.html'">서비스 이용해보기</button>
                 </p>
             </li>
         </ul>
@@ -329,7 +326,7 @@
                                 지금 바로 이용해 보세요!<br>
                                 물론, 무료입니다!<br><br>
                         
-                                <button type="button" class="btn btn-primary">서비스 이용해보기</button>
+                                <button type="button" class="btn btn-primary" onClick="location.href='que.html'">서비스 이용해보기</button>
                         </font>
                     </article>
         
@@ -340,7 +337,7 @@
                                 함께 성장합니다. 오류를 제보해 주시면<br>
                                 서비스 개선에 큰 도움이 돼요.<br><br>
         
-                                <button type="button" class="btn btn-primary">자세히 알아보기</button>
+                                <button type="button" class="btn btn-primary" onClick="location.href='report.html'">자세히 알아보기</button>
                         </font>
                     </article>
         
@@ -351,7 +348,7 @@
                                 문의를 남겨 주시면 담당자가<br>
                                 확인 후 답변을 드려요.<br><br>
                                 
-                                <button type="button" class="btn btn-primary">서비스 문의하기</button>
+                                <button type="button" class="btn btn-primary" onClick="location.href='question.html'">서비스 문의하기</button>
                         </font>
                     </article>
                 </section>
