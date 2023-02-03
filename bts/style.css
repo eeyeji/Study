@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    /*화면 키우기*/
+   
+    background: black;
+}
+
+section{
+    /*100vh: 내가 보는 화면 100%를 쓰겠다*/
+    height: 100vh;
+    /* 안에 내용이 없으면 background 이미지 안나타남*/
+    background: url(https://ibighit.com/bts/images/profile/proof/member/bts-pc.jpg);
+}
+
+/* before: section 전에 즉, 위에다가 주겠다*/
+section:before{
+    /*'': 비어있는 공간을 만들겠다*/
+    content:'';
+    /*그라데이션을 주겠다 오른쪽으로 갈수록,  검정색, 투명하게*/
+    /*right, left, top, bottom*/
+    /* background: linear-gradient(to right, black, transparent); */
+    background: linear-gradient(to right, black, transparent);
+    /*위치 고정*/
+    position:absolute;
+    /*왼쪽에 붙이기*/
+    left:0;
+    height:100%;
+    width: 65%;
+}
+
+h1{
+    color:white;
+    font-size: 6em;
+    position: absolute;
+    /*위에서 200px만큼 떨어지게*/
+    top:400px;
+    left: 100px;
+    font-family: sans-serif;
+}
