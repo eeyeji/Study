@@ -1,0 +1,381 @@
+*{
+    padding:0;
+    margin:0;
+
+    /* border-box : 가로와 세로 너비를 마진 영역을 제외한 padding, contents, border를 포함한 크기로 설정한다.
+    따라서 padding, contents, border가 들어가더라도 전체 box size는 그대로 유지된다.
+    왜? 전체 크기가 중요하니까. padding이나 border를 넣더라도 전체 크기를 유지하고 싶을때 border-box 설정을 사용한다. */
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif';
+    background-color: black;
+    /* 글씨 하얀색으로 설정 */
+    color: white;
+
+}
+
+.top-wrap{
+    background-color: white;
+    color:black;
+    align-items: center;
+    display:flex;
+    font-family:'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif';
+    justify-content: center;
+    margin-bottom: 1rem;
+    min-height: 4rem;
+}
+.top-wrap .top-first{
+ 
+    background-color:crimson;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.top-wrap .top-second span{
+
+    padding-left: 10px;
+    font-size: 1.26rem;
+    font-weight: bold;
+}
+.top-wrap .top-second{
+
+    padding-left: 20px;
+}
+.top-wrap .top-third{
+ 
+    padding-left: 50px;
+}
+
+
+
+header{
+    display: grid;
+    /* 열 두개 만들기 */
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    /* 배경이미지 위에 헤더 위치 */
+    position:absolute;
+
+    /* 포지션을 이용하여 엘리먼트가 붕 뜨게 되었을 때, 자신이 z축으로 어느 위치에 있는지 설정하는 속성
+    한 요소가 다른 요소의 일부분을 덮으려고 할 때 사용
+    정수 값이 클 수록 위에 표시 
+    
+    - default 값 : auto
+    - HTML 페이지의 뒤에 입력한 태그가 상위에 위치하는 순서를 변경 시 사용 (ex. div 태그들끼리의 위치가 겹칠 때)
+    - position 속성인 relative, absolute 가 적용된 상태에서 적용해야 한다
+
+    */
+    z-index: 5;
+
+    /* 로고랑 select박스/로그인버튼 원래대로 위치시키기 */
+    width: 100%;
+    
+}
+header a.logo{
+    display: block;
+}
+
+header .logo svg{
+    fill:red;
+    height:37px;
+}
+
+/* 오른쪽 정렬 */
+header div+div{
+    text-align:right;
+}
+
+header a.button{
+    /* 한열에 정렬? */
+    display: inline-block;
+    background-color: red;
+    color: white; 
+    /* a태그 밑줄 없애기 */
+    text-decoration: none;
+    padding: 7px 17px;
+    border-radius: 3px;
+}
+
+header select{
+    /* 투명 */
+    background: transparent;
+    color: white;
+    padding: 6px 0 6px 20px;
+    border-radius: 3px;
+    /* 투명
+    opacity: 0.7; */
+}
+header div.select{
+    /* 로그인버튼 select박스 옆에 위치시키기 위해서 */
+    display: inline-block;
+    margin-right:30px;
+}
+
+header div.select svg{
+    height:20px;
+    fill: white;
+    position:absolute;
+    margin-top:9px;
+    margin-left: 5px;
+}
+
+div.splash{
+    position:relative;
+}
+
+div.splash div.gradient{
+    background-image:linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 40%,transparent 75%,rgba(0,0,0,.8));
+    position: absolute;
+    /* 배경 이미지랑 헤더랑 자연스럽게 이어줌  
+       inset: 상하좌우값을 지정해 줄수 있는 css 속성.*/
+    inset:0;
+}
+
+div.splash div.background img{
+    max-width: 100%;
+    /* 그라데이션 효과 */
+    opacity: 0.6;
+}
+
+div.splash div.content{
+    padding-top: 95px;
+    padding-bottom: 95px;
+    max-width: 655px;
+    position: absolute;
+    inset:0;
+    left:50%;
+    margin-left: -327.5px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+div.splash h1, div.splash h2, div.splash h3{
+    font-weight: normal;
+}
+
+div.splash h1{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+
+div.splash h2{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+div.splash h3{
+    font-size: 1.2rem;
+}
+div.cta form{
+    position:relative;
+    display: grid;
+    margin-top: 20px;
+    /* 한열에 꽉채우게 */
+    grid-template-columns: 1fr max-content;
+}
+div.cta input{
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    width:100%;
+}
+
+div.cta input~span{
+    position: absolute;
+    left:12px;
+    top:19px;
+    z-index: 3;
+    color:grey;
+    transition: all 0.3s ease;
+    /* 이벤트 제어 */
+    pointer-events: none;
+}
+
+div.cta input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+
+/* 이메일 작성시 이메일이라는 표시 위로 올라가게 */
+div.cta input:focus~span{
+    top: 4px;
+    font-size: .8rem;
+}
+
+div.cta button{
+    font-size: 1.625rem;
+    padding: 12px 20px;
+    background-color: red;
+    color: white;
+    border:0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:46px;
+    padding: 70px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+
+section.last{
+    border-bottom: 8px solid #222 ;
+}
+
+section div.texts h1{
+    font-size: 3.125rem;
+    margin-bottom: 8px;
+    
+}
+section div.texts p{
+    font-size: 1.625rem;
+}
+.media{
+    position: relative;
+}
+
+.media.s1 img{
+    width: 400px;
+    position: relative;
+    z-index: 3;
+
+}
+.media.s1 video{
+    width: 285px;
+    position: absolute;
+    top:64px;
+    left: 56px;
+
+}
+
+/* 지그재그 정렬: 글 그림 -> 그림 글 -> 글 그림 -> 그림 글 */
+section:nth-child(even) div.texts{
+    order: 2;
+}
+
+.media.s2 img{
+    width: 400px;
+    position: relative;
+    z-index: 3;
+}
+
+.media.s2 video{
+    width: 250px;
+    position: absolute;
+    top:30px;
+    left: 78px;
+
+}
+section div.download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+    display: grid;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 270px;
+    left: 50%;
+    margin-left: -140px;
+    background-color: black;
+    gap: 7px;
+    grid-template-columns: max-content 1fr max-content;
+}
+section div.download img{
+    height: 75px;
+    width: auto;
+}
+section div.download div.text-0{
+    margin-top: 10px;
+    padding-left: 2px;
+}
+
+section div.download div.text-1{
+    margin-top: 2px;
+    color: #0071eb;
+}
+div.faq{
+    padding:70px 30px;
+}
+
+div.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div.questions{
+    
+    max-width: 635px;
+    margin: 0 auto;
+    font-size: 1.625rem;
+    
+}
+div.question{
+    position: relative;
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+div.question svg{
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 22px;
+    position: absolute;
+    /* +모양으로 바꿈(45도 돌려서) */
+    transform:rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .header{
+    display: block;
+    padding:20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+/* 질문 누르기 전: 답변 숨기기 */
+div.question div.answer{
+    padding: 0 30px;
+    max-height: 0;
+    /* 답변 숨기기 */
+    overflow: hidden;
+    /* transition
+        all: 기본값, 모든 속성에 효과가 나타남
+        ease: 빠르게 오다가 끝지점에서 천천히 */
+    transition: all 0.2s ease;
+}
+/* 체크박스 숨기기 */
+div.question input[type="checkbox"]{
+    display: none;
+}
+/* 질문 누른 후: 답변 보이기 */
+div.question input[type="checkbox"]:checked~div.answer{
+    padding: 0 30px;
+    max-height: 600px;
+}
+div.question input[type="checkbox"]:checked~.header svg{
+    transform:rotate(90deg);
+}
+
+div.text{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+div.faq form{
+    max-width: 635px;
+    margin: 0 auto;
+}
